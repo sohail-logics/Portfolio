@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Certifications — Sohail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+:root {
+  --fh: "Fraunces", serif;
+  --fb: "Plus Jakarta Sans", sans-serif;
+  --r: 18px;
+  --rs: 12px;
+  --tr: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+[data-theme="light"] {
+  --bg: #f4f6fb;
+  --bg2: #eaeff8;
+  --bg3: #dce4f3;
+  --card: #ffffff;
+  --bd: #d0d9ee;
+  --bd2: #b6c3e2;
+  --t1: #0f1b3d;
+  --t2: #4a5578;
+  --t3: #8d97b8;
+  --ac: #4f46e5;
+  --aclt: #eef0ff;
+  --acmid: #c7c3f9;
+  --ac2: #3730a3;
+  --nav-bg: rgba(244, 246, 251, 0.9);
+  --shadow: 0 4px 24px rgba(79, 70, 229, 0.08);
+  --shadowlg: 0 12px 48px rgba(79, 70, 229, 0.14);
+}
+[data-theme="dark"] {
+  --bg: #0d0f1a;
+  --bg2: #131626;
+  --bg3: #1a1e32;
+  --card: #181b2e;
+  --bd: #262b46;
+  --bd2: #333a5c;
+  --t1: #e8ecff;
+  --t2: #8b93bb;
+  --t3: #545d82;
+  --ac: #818cf8;
+  --aclt: rgba(129, 140, 248, 0.12);
+  --acmid: rgba(129, 140, 248, 0.28);
+  --ac2: #a5b4fc;
+  --nav-bg: rgba(13, 15, 26, 0.92);
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  --shadowlg: 0 12px 48px rgba(0, 0, 0, 0.6);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--fb);
+  background: var(--bg);
+  color: var(--t1);
+  overflow-x: hidden;
+  line-height: 1.7;
+  transition:
+    background var(--tr),
+    color var(--tr);
+}
+::selection {
+  background: var(--acmid);
+  color: var(--t1);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ac);
+  border-radius: 3px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 2.5rem;
+  transition: all var(--tr);
+}
+.nav.stuck {
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--bd);
+  padding: 0.8rem 2.5rem;
+}
+.nav-logo {
+  font-family: var(--fh);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--t1);
+  letter-spacing: -0.03em;
+}
+.nav-logo span {
+  color: var(--ac);
+}
+.nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--t2);
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--bd);
+  border-radius: var(--rs);
+  transition: all var(--tr);
+}
+.nav-back:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+  background: var(--aclt);
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.theme-toggle {
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: var(--bg3);
+  border: 1.5px solid var(--bd2);
+  cursor: pointer;
+  position: relative;
+  transition: background var(--tr);
+  flex-shrink: 0;
+}
+.theme-toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--ac);
+  transition: transform var(--tr);
+}
+[data-theme="dark"] .theme-toggle::before {
+  transform: translateX(20px);
+}
+.toggle-icons {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4px;
+  pointer-events: none;
+}
+.toggle-icons i {
+  font-size: 0.55rem;
+  color: var(--t3);
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--t1);
+  border-radius: 2px;
+  transition: var(--tr);
+}
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--rs);
+  font-family: var(--fb);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all var(--tr);
+}
+.btn-ac {
+  background: var(--ac);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.3);
+}
+.btn-ac:hover {
+  background: var(--ac2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(79, 70, 229, 0.4);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--t1);
+  border: 1.5px solid var(--bd2);
+}
+.btn-ghost:hover {
+  border-color: var(--ac);
+  color: var(--ac);
+  background: var(--aclt);
+  transform: translateY(-2px);
+}
+.page-hero {
+  padding: 8rem 2rem 4rem;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--bd);
+  position: relative;
+  overflow: hidden;
+}
+.page-hero-dots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(var(--bd) 1.5px, transparent 1.5px);
+  background-size: 32px 32px;
+  opacity: 0.5;
+  mask-image: radial-gradient(
+    ellipse 80% 100% at 50% 0%,
+    black 30%,
+    transparent 80%
+  );
+}
+.page-hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+.page-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ac);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  background: var(--aclt);
+  border: 1px solid var(--acmid);
+  padding: 0.25rem 0.85rem;
+  border-radius: 100px;
+  margin-bottom: 1rem;
+}
+.page-title {
+  font-family: var(--fh);
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--t1);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 1rem;
+}
+.page-title em {
+  font-style: italic;
+  color: var(--ac);
+}
+.page-sub {
+  color: var(--t2);
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+}
+.page-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.pstat-num {
+  font-family: var(--fh);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--t1);
+  line-height: 1;
+}
+.pstat-num span {
+  color: var(--ac);
+}
+.pstat-label {
+  font-size: 0.75rem;
+  color: var(--t3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+.filter-bar {
+  padding: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+.filter-btn {
+  padding: 0.45rem 1.1rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1.5px solid var(--bd);
+  background: var(--card);
+  color: var(--t2);
+  cursor: pointer;
+  transition: all var(--tr);
+}
+.filter-btn:hover,
+.filter-btn.active {
+  border-color: var(--ac);
+  background: var(--aclt);
+  color: var(--ac);
+}
+.filter-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--t3);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-right: 0.35rem;
+}
+.certs-section {
+  padding: 1rem 0 5rem;
+}
+.certs-group {
+  margin-bottom: 3.5rem;
+}
+.group-title {
+  font-family: var(--fh);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--t1);
+  letter-spacing: -0.03em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.group-title::after {
+  content: "";
+  flex: 1;
+  height: 1.5px;
+  background: var(--bd);
+}
+.group-count {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--ac);
+  background: var(--aclt);
+  border: 1px solid var(--acmid);
+  padding: 0.15rem 0.6rem;
+  border-radius: 100px;
+}
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.35rem;
+}
+.cert-card {
+  background: var(--card);
+  border: 1.5px solid var(--bd);
+  border-radius: var(--r);
+  overflow: hidden;
+  transition: all var(--tr);
+  display: flex;
+  flex-direction: column;
+}
+.cert-card:hover {
+  border-color: var(--ac);
+  box-shadow: var(--shadowlg);
+  transform: translateY(-5px);
+}
+.cert-img {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--bg3);
+  position: relative;
+}
+.cert-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+.cert-card:hover .cert-img img {
+  transform: scale(1.05);
+}
+.cert-category {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+.cat-web {
+  background: rgba(79, 70, 229, 0.85);
+  color: #fff;
+}
+.cat-ai {
+  background: rgba(16, 163, 74, 0.85);
+  color: #fff;
+}
+.cat-cyber {
+  background: rgba(220, 38, 38, 0.85);
+  color: #fff;
+}
+.cat-db {
+  background: rgba(217, 119, 6, 0.85);
+  color: #fff;
+}
+.cat-cloud {
+  background: rgba(14, 165, 233, 0.85);
+  color: #fff;
+}
+.cat-other {
+  background: rgba(107, 114, 128, 0.85);
+  color: #fff;
+}
+.cert-body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.cert-body h3 {
+  font-family: var(--fh);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--t1);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+.cert-org {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--ac);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.cert-date {
+  font-size: 0.75rem;
+  color: var(--t3);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+.cert-foot {
+  margin-top: auto;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--bd);
+}
+.cert-view-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ac);
+  padding: 0.5rem 1rem;
+  border: 1.5px solid var(--acmid);
+  border-radius: var(--rs);
+  background: var(--aclt);
+  transition: all var(--tr);
+  width: 100%;
+  justify-content: center;
+}
+.cert-view-btn:hover {
+  background: var(--ac);
+  color: #fff;
+  border-color: var(--ac);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+.back-home {
+  text-align: center;
+  padding: 2rem 0 4rem;
+}
+.rv {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+.rv.vis {
+  opacity: 1;
+  transform: none;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 760px) {
+  .nav {
+    padding: 1rem 1.5rem;
+  }
+  .nav.stuck {
+    padding: 0.75rem 1.5rem;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .page-stats {
+    gap: 1.5rem;
+  }
+  .certs-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+  .filter-bar {
+    gap: 0.5rem;
+  }
+}
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0 1.25rem;
+  }
+  .page-stats {
+    gap: 1.2rem;
+  }
+  .pstat-num {
+    font-size: 1.6rem;
+  }
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="mainNav">
+  <a href="index.html" class="nav-logo">Sohail<span>.</span></a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <div class="toggle-icons"><i class="fas fa-sun"></i><i class="fas fa-moon"></i></div>
+    </button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-dots"></div>
+  <div class="page-hero-inner">
+    <span class="page-tag">Credentials</span>
+    <h1 class="page-title">My <em>Certifications</em></h1>
+    <p class="page-sub">A complete collection of certifications earned through courses, platforms, and hands-on learning across multiple domains.</p>
+    <div class="page-stats">
+      <div class="pstat-item">
+        <div class="pstat-num">20<span>+</span></div>
+        <div class="pstat-label">Total Certs</div>
+      </div>
+      <div class="pstat-item">
+        <div class="pstat-num">5<span>+</span></div>
+        <div class="pstat-label">Domains</div>
+      </div>
+      <div class="pstat-item">
+        <div class="pstat-num">2025<span>–26</span></div>
+        <div class="pstat-label">Active Period</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" data-cat="all">All</button>
+    <button class="filter-btn" data-cat="web">Programming</button>
+    <button class="filter-btn" data-cat="ai">Artificial Intelligence</button>
+    <button class="filter-btn" data-cat="cyber">Cybersecurity</button>
+    <button class="filter-btn" data-cat="db">Databases</button>
+    <button class="filter-btn" data-cat="cloud">Cloud</button>
+    <button class="filter-btn" data-cat="other">Other</button>
+  </div>
+
+  <div class="certs-section">
+
+    <div class="certs-group" data-group="web">
+      <h2 class="group-title">Programming <span class="group-count">4</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card rv" data-cat="web">
+          <div class="cert-img">
+            <img src="images/certifications/intro to cs.png" alt="Web Dev Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>CS50: Introduction to Computer Science</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Harvard University</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> June 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/13qwxkd2zcelHsHxWurY9abHejK9oq5zz/view?usp=sharing" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="web">
+          <div class="cert-img">
+            <img src="images/certifications/python essentials1.png" alt="JS Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Python Essentials 1</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Cisco networking Academy</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Oct 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1nnJtdES3_CXYaJwPnMnsdyXCi188IeHL/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="web">
+          <div class="cert-img">
+            <img src="images/certifications/Python for all levels.png" alt="Bootstrap Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Python Programming for All Levels</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> National Vocatoinal and Technical Training Initiative(NVTTI)</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Mar 2024</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1Ae_MQmUS8KIJlCP_fvPTorVMPtcfSZQa/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="web">
+          <div class="cert-img">
+            <img src="images/certifications/c++ programming nvtti.png" alt="HTML CSS Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>C++ Programming Fundamentals</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> National Vocational and Technical Training Initiative(NVTTI)</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Sep 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1HvnNu9m245SvscTz7BVSdBZU53zyeDSR/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+         <div class="cert-card rv" data-cat="web">
+          <div class="cert-img">
+            <img src="images/certifications/intro to programming.jpeg" alt="Web Dev Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Intro to Programming</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Kaggle</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> May 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1nnJtdES3_CXYaJwPnMnsdyXCi188IeHL/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="web">
+          <div class="cert-img">
+            <img src="images/certifications/c++ programming psdi.png" alt="HTML CSS Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>C++ Programming Fundamentals</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Punjab Skill Development Initiative(PSDI)</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Sep 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1Lt0smo4MUPRp-kpJWuM9tYf9SNBIQXaO/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="certs-group" data-group="ai">
+      <h2 class="group-title">Artificial Intelligence <span class="group-count">4</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/gemini uni student.png" alt="AI Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Gemini University Student</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Google</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Mar 2026</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/10wG8YzhEq0sQV9usGD9nliD7ijEbSB97/view?usp=sharing" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/getting started with ai.png" alt="ML Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Getting Started with Artificial Intelligence</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> IBM SkillsBuild</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Jan 2026</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1A2gNLGfGtTJYOD6MbQrwgoQ-5T8JI6uf/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/intro to modern ai.jpeg" alt="ChatGPT Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Introduction to Modern AI</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Cisco Networking Acedemy</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Jan 2026</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/19vZfSq7Nr0gMXasncnOQzdQjFU1MS-do/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+         <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/foundatoin of prompt eng.jpeg" alt="AI Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Foundations of Prompt Engineering</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Amazon Web Services(AWS)</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Feb 2026</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1YPUA5Jte-Xz3jkF2JkYSWrTY6G5CNi9P/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/ai concept for developer.jpeg" alt="NLP Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>AI Concepts for Developers and Technology professionals</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Microsoft</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Mar 2026</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/13zBzjU29f7jXQhMuIYh6OZeI_jKGxM83/view?usp=sharing" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/ai and data science.png" alt="NLP Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>AI and Data Science for Bigenners</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Punjab Skill Development Initiative(PSDI)</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> July 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1Lk6OtVGJ20--oUpoHajkw_QxiVzb5VVk/view?usp=sharing" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/critical thinking.jpeg" alt="NLP Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Critical thinking in AI Era</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> HP Life</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> July 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1CiqHjXJlt_cGmyKSXyPdzfO-aOGUxjn5/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+         <div class="cert-card rv" data-cat="ai">
+          <div class="cert-img">
+            <img src="images/certifications/an intro to generative ai studio.jpeg" alt="NLP Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Introduction to Generative AI Studio</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> SimpliLearn</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> July 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1V1aUPGXpRWUOvU3rN_4UYtLf2od8Qc8N/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="certs-group" data-group="cyber">
+      <h2 class="group-title">Cybersecurity <span class="group-count">4</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card rv" data-cat="cyber">
+          <div class="cert-img">
+            <img src="images/certifications/cybersecurity fundamentals.jpeg" alt="Cyber Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Cybersecurity Fundamentals</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> IBM SkillsBuild</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Feb 2026</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1sA7CuNyfkcMoJnGbzGiKeSJwCvK6btNR/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+       
+
+        
+
+       
+
+      </div>
+    </div>
+
+    <div class="certs-group" data-group="db">
+      <h2 class="group-title">Databases <span class="group-count">4</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card rv" data-cat="db">
+          <div class="cert-img">
+            <img src="images/certifications/database.jpeg" alt="SQL Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>AWS Certified Database - Specialty</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> National Vocational and Technical Training Initiative(NVTTI)</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Sep 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1hkQcdENI0PB3iblMcm2fls5Xe-vjl3Z4/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <div class="certs-group" data-group="other">
+      <h2 class="group-title">Other <span class="group-count">4</span></h2>
+      <div class="certs-grid">
+
+        <div class="cert-card rv" data-cat="other">
+          <div class="cert-img">
+            <img src="images/certifications/climate change.png" alt="Climate Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>AN Introduction to Climate Change and Human Rights</h3>
+            <div class="cert-org"><i class="fas fa-award"></i>United Nation Climate Change</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Mar 2026</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1_PLms62s24Q4MvvqWTgVyPahlINHTq2L/view?usp=sharing" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="other">
+          <div class="cert-img">
+            <img src="images/certifications/italian .png" alt="Git Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Italian for Beginners A1/A2 Level</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Udemy</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> Jun 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1VYVCCBPzKXH97c-kq5jBxc8YOwHZX9DP/view?usp=sharing" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="other">
+          <div class="cert-img">
+            <img src="images/certifications/great future.png" alt="Python Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>GREAT FUTURE TALENT OLYMPIAD - 2025</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Great Future Pakistan</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i>Apr 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1QlGLfECH1g6Zo0S1-WVk4oywvDPDB7Z_/view?usp=drive_link" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card rv" data-cat="other">
+          <div class="cert-img">
+            <img src="images/certifications/google ads.png" alt="Soft Skills Cert" onerror="this.src='https://via.placeholder.com/700x394/eef0ff/4f46e5?text=Certificate'">
+            
+          </div>
+          <div class="cert-body">
+            <h3>Google Ads Masterclass</h3>
+            <div class="cert-org"><i class="fas fa-award"></i> Punjab Skill Development Initiative(PSDI)</div>
+            <div class="cert-date"><i class="far fa-calendar-alt"></i> 2025</div>
+            <div class="cert-foot">
+              <a href="https://drive.google.com/file/d/1Twde009b7uuOGtateIaFLLvG6EHL7cON/view?usp=sharing" target="_blank" class="cert-view-btn"><i class="fas fa-external-link-alt"></i> View Certificate</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="back-home">
+    <a href="index.html" class="btn btn-ghost"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+  </div>
+
+</div>
+
+<script>
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => nav.classList.toggle('stuck', scrollY > 60));
+
+const html = document.documentElement;
+html.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const next = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
+const rvObs = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.08 });
+document.querySelectorAll('.rv').forEach((el, i) => { el.style.transitionDelay = (i % 4) * 0.07 + 's'; rvObs.observe(el); });
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.getAttribute('data-cat');
+    document.querySelectorAll('.cert-card').forEach(card => {
+      if (cat === 'all' || card.getAttribute('data-cat') === cat) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    document.querySelectorAll('.certs-group').forEach(group => {
+      const visible = group.querySelectorAll('.cert-card[style="display: flex;"], .cert-card:not([style])');
+      const anyVisible = cat === 'all' || group.getAttribute('data-group') === cat;
+      group.style.display = anyVisible ? 'block' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>
