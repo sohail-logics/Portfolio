@@ -1414,26 +1414,26 @@
         opacity: 1;
         transform: none;
       }
-     @media (max-width: 960px) {
+    @media (max-width: 960px) {
   .hero-inner {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     gap: 2rem;
-    justify-items: center;
+    width: 100%;
   }
   .hero-card {
     order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .hero-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-  }
-  .hero-eyebrow,
-  .hero-actions,
-  .hero-stats {
-    justify-content: center;
   }
   .hero-name {
     text-align: center;
@@ -1445,19 +1445,27 @@
   }
   .roles-row {
     justify-content: center;
+    flex-wrap: wrap;
   }
   .hero-desc {
-    margin: 0 auto 2.5rem;
     text-align: center;
     width: 100%;
+    max-width: 100%;
+    margin: 0 auto 2rem;
   }
-  .hero-card {
-    max-width: 280px;
-    margin: 0 auto;
+  .hero-eyebrow,
+  .hero-actions,
+  .hero-stats {
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .hero-photo-wrap {
-    width: 260px;
-    height: 260px;
+    width: 240px;
+    height: 240px;
+  }
+  .hero-card {
+    max-width: 100%;
+    margin: 0 auto;
   }
   .b-bio {
     grid-column: span 12;
