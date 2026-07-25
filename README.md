@@ -2,7 +2,7 @@
 
 A fully responsive personal portfolio website built from scratch using **HTML5, CSS3, and vanilla JavaScript** — no frameworks, no templates.
 
-Live at: [sohail-logics.netlify.app](https://sohail-logics.netlify.app)
+Live at: [sohail-logics.netlify.app](https://sohail-logics.vercel.app)
 
 ---
 
@@ -46,7 +46,7 @@ Portfolio/
 
 No installation needed. Just open `index.html` in any browser.
 
-Or view it live at: [sohail-logics.netlify.app](https://sohail-logics.netlify.app)
+Or view it live at: [sohail-logics.netlify.app](https://sohail-logics.vercel.app)
 
 ---
 
